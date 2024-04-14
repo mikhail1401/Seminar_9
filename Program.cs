@@ -58,14 +58,12 @@ Console.WriteLine("\nTask 67");
 Console.Write("Type a number: ");
 int x = int.Parse(Console.ReadLine());
 
-int sum = 0;
-
 int SumOfDigits(int num)
 {
-    if (num%10 == 0 && num/10 == 0) return sum;
+    if (num%10 == 0 && num/10 == 0) return 0;
     else
     {
-        return sum += num%10 + SumOfDigits(num/10);
+        return num%10 + SumOfDigits(num/10);
     }
 }
 
