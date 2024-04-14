@@ -11,17 +11,17 @@ int startNum = 1;
 Console.Write("Type a number: ");
 int num = int.Parse(Console.ReadLine());
 
-string PrintNumbers(int start, int end)
+string PrintNumbers1(int start, int end)
 {
     if (start == end)
     {
         return start.ToString();
     } 
     // When we use consentation of an intenger (start) and a string (" "), C# implicitly converts the integer to a string
-    return (start + " " + PrintNumbers(start + 1, end));
+    return (start + " " + PrintNumbers1(start + 1, end));
 }
 
-Console.WriteLine(PrintNumbers(startNum, num));
+Console.WriteLine(PrintNumbers1(startNum, num));
 
 
 Console.WriteLine("\nTask 64");
@@ -33,4 +33,17 @@ Console.WriteLine("\nTask 64");
 int m = 4;
 int n = 10;
 
-Console.WriteLine(PrintNumbers(m, n));
+string PrintNumbers2(int num1, int num2)
+{
+    if (num1 > num2)
+    {
+        return PrintNumbers1(num2, num1);
+    } 
+    else if (num1 <= num2)
+    {
+        return PrintNumbers1(num1, num2);
+    }
+    else return " ";
+}
+
+Console.WriteLine(PrintNumbers2(m, n));
