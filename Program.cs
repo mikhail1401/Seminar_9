@@ -68,3 +68,31 @@ int SumOfDigits(int num)
 }
 
 Console.WriteLine(SumOfDigits(x));
+
+
+Console.WriteLine("\nTask 69");
+// Задача 69: Напишите программу, которая на вход принимает два числа A и B, 
+// и возводит число А в целую степень B с помощью рекурсии.
+// A = 3; B = 5 -> 243 (3⁵)
+// A = 2; B = 3 -> 8
+
+Console.Write("Type the first number A: ");
+double a = double.Parse(Console.ReadLine());
+
+Console.Write("Type the second number B: ");
+double b = double.Parse(Console.ReadLine());
+
+double NumberToPower(double num1, double num2)
+{
+    if (num2 == 0) return 1;
+    else if (num2 > 0)
+    {
+        return num1 * (NumberToPower(num1, num2-1));
+    }
+    else
+    {
+        return 1/num1 * (NumberToPower(num1, num2+1));
+    }
+}
+
+Console.WriteLine(NumberToPower(a, b));
