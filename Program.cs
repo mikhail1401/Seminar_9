@@ -47,3 +47,19 @@ string PrintNumbers2(int num1, int num2)
 }
 
 Console.WriteLine(PrintNumbers2(m, n));
+
+
+Console.WriteLine("\nTask 67");
+// Задача 67: Напишите программу, которая будет 
+// принимать на вход число и возвращать сумму его цифр.
+// 453 -> 12
+// 45 -> 9
+
+ConsoleWrite("Type a number: ");
+int x = int.Parse(ConsoleReadLine());
+
+int sum = 0;
+int SumOfDigits(int num)
+{
+    
+}
